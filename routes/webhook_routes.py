@@ -47,8 +47,7 @@ def handle_convo_ai(action, channel_name=None):
                     "remote_rtc_uids": [Config.DEFAULT_UID],
                     "idle_timeout": 120,
                     "advanced_features": {
-                        "enable_bhvs": True,
-                        "enable_aivad": True
+                        "enable_bhvs": True
                     },
                     "llm": {
                         "style": "openai",
@@ -116,13 +115,12 @@ Remember to:
                     "asr": {
                         "language": "en-US"
                     },
-                    "vad": {
-                        "silence_duration_ms": 480
+                    "turn_detection": {
+                        "interrupt_mode": "interrupt",
+                        "interrupt_duration_ms": 300,
                     },
                     "parameters": {
-                        "enable_dump": True,
-                        "enable_error_message": True,
-                        "enable_delay": True
+                        "audio_scenario": "chorus"
                     }
                 }
             }
